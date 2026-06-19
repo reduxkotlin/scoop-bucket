@@ -1,0 +1,21 @@
+{
+    "version": "1.0.0-alpha02",
+    "description": "rk — the unified redux-kotlin CLI (devtools + snapshot)",
+    "homepage": "https://reduxkotlin.org",
+    "license": "Apache-2.0",
+    "url": "https://github.com/reduxkotlin/redux-kotlin/releases/download/v1.0.0-alpha02/rk-1.0.0-alpha02-windows-x86_64.zip",
+    "hash": "sha256:cf4684a57ea299047e0700e2bc8b09fe6e986e80389fa280fc4b5a62d097c522",
+    "extract_dir": "rk",
+    "env_add_path": "bin",
+    "checkver": {
+        "url": "https://github.com/reduxkotlin/redux-kotlin/releases/latest",
+        "re": "v([\\d.]+).zip"
+    },
+    "autoupdate": {
+        "url": "https://github.com/reduxkotlin/redux-kotlin/releases/download/v$version/rk-$version-windows-x86_64.zip",
+        "extract_dir": "rk-$version-windows-x86_64",
+        "hash": {
+            "url": "$url.sha256"
+        }
+    }
+}
